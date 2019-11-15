@@ -1,0 +1,79 @@
+{
+  "files.autoSave": "off", //自动保存方式
+  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": true,
+  "breadcrumbs.enabled": true,
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false,
+  "workbench.iconTheme": "material-icon-theme", //主题
+  /*窗口样式的配置*/
+  "workbench.colorCustomizations": {
+    "statusBar.debuggingBackground": "#c06f98", //状态栏debug背景色
+    "statusBar.foreground": "#a2b4bd", //状态栏前景色
+    "editorBracketMatch.background": "#5a6f75" //匹配括号背景颜色
+  },
+  "git.confirmSync": false,
+  "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\bin\\bash.exe", //默认终端
+  "editor.fontLigatures": true, //使用连体字
+  "editor.fontFamily": "Cascadia, Fira Code, Consolas, monospace, 'Courier New'", //设置编辑器字体
+  "terminal.integrated.shell.linux": "/bin/bash",
+  "workbench.sideBar.location": "right", //活动栏位置
+  "editor.formatOnSave": true, //保存自动格式化
+  "debug.console.fontFamily": "Fira Code", //调试控制台的字体
+  "debug.openDebug": "neverOpen",
+  //"C_Cpp.updateChannel": "Insiders", //何时打开调试视图
+  // "emmet.triggerExpansionOnTab": true,  //emmet用tab展开
+  //"editor.snippetSuggestions": "top", //自定义的代码段位置为置顶
+  /*emmet插件变量自定义*/
+  "emmet.variables": {
+    "lang": "cmn-Hans",
+    "charset": "UTF-8"
+  },
+  /*
+    **
+    * 不同环境的单独配置
+    **
+    */
+  "[markdown]": {
+    "editor.quickSuggestions": true, //允许md使用候选词
+  },
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify", //html使用beautify插件格式化
+  },
+  /*
+    *
+    *  用户安装的插件配置
+    *
+    */
+  /*markdown配置文件*/
+  // "markdownlint.config": {
+  //   //html
+  //   "MD033": false,
+  //   //结尾空行
+  //   "MD047": false,
+  //   //尾随空格
+  //   "MD009": false,
+  //   //有序列表
+  //   "MD029": false,
+  // },
+  /*bracket-pair-colorizer-2插件的配置*/
+  // "bracket-pair-colorizer-2.showBracketsInGutter": true, //在装订线中显示活动范围括号
+  // "bracket-pair-colorizer-2.excludedLanguages": [
+  //   "",
+  // ], //设置某某后缀名文件不使用该插件
+  /*HTML CSS Support插件指定样式表*/
+  "css.fileExtensions": [
+    "css",
+    "scss"
+  ],
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.colorTheme": "Material Theme",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.startupEditor": "newUntitledFile",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+}
