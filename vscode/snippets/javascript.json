@@ -1,5 +1,9 @@
 {
-	//控制台打印console
+	"Strict mode": {
+		"prefix": "us",
+		"body": "'use strict';",
+		"description": "严格模式"
+	},
 	"Console.log": {
 		"prefix": "cl",
 		"body": [
@@ -34,7 +38,6 @@
 		"body": "console.warn('${0}', ${0});",
 		"description": "console.warn labeled"
 	},
-	//HTML  DOM
 	"document.write": {
 		"prefix": "dw",
 		"body": [
@@ -42,7 +45,6 @@
 		],
 		"description": "向文档写入"
 	},
-	//functions
 	"自定义function": {
 		"prefix": "fun",
 		"body": [
@@ -70,7 +72,7 @@
 		],
 		"description": "立即执行函数"
 	},
-	// 声明定义 
+	// 声明定义
 	//var
 	"var statement": {
 		"prefix": "v",
@@ -111,11 +113,11 @@
 		"body": "const ${1:name} = ${2:value};",
 		"description": "const 声明"
 	},
-	// "destructuring const assignment": {
-	// 	"prefix": "dco=",
-	// 	"body": "const {${1:name}} = ${2:value};",
-	// 	"description": "destructuring const assignment"
-	// },
+	"destructuring const assignment": {
+		"prefix": "dco=",
+		"body": "const {${1:name}} = ${2:value};",
+		"description": "destructuring const assignment"
+	},
 	//控制
 	//if判断语句
 	"if statement": {
@@ -155,7 +157,7 @@
 	//for循环
 	"for loop": {
 		"prefix": "fl",
-		"body": "for (let ${1:i} = 0, ${2:len} = ${3:iterable}.length; ${1:i} < ${2:len}; ${1:i}++) {\n\t${0}\n}",
+		"body": "for (let ${1:i} = 0; ${1:i} < ${2:iterable}.length; ${1:i}++) {\n\t${0}\n}",
 		"description": "for 循环"
 	},
 	"for loop var": {
@@ -268,8 +270,33 @@
 		"body": "setInterval(() => {\n\t${0}\n}, ${1:delay});",
 		"description": "setInterval"
 	},
-	//----------------------------------------------------------------------------------
-	//----------------------------------------------------------------------------------
+	// return 返回值
+	"return": {
+		"prefix": "r",
+		"body": "return ${0};",
+		"description": "return 返回值"
+	},
+	"return Promise (ES6)": {
+		"prefix": "rp",
+		"body": "return new Promise((resolve, reject) => {\n\t${0}\n});",
+		"description": "return Promise (ES6)"
+	},
+	"return complex value (such as JSX components)": {
+		"prefix": "rc",
+		"body": "return (\n\t${0}\n);",
+		"description": "返回复杂值 (例如JSX组件)"
+	},
+	//类和对象以及原型
+	"prototypal constructor": {
+		"prefix": "pctor",
+		"body": "var ${1:Class} = function(${2:arguments}) {\n\t${0}\n};",
+		"description": "prototypal constructor 函数表达式"
+	},
+	"prototype method": {
+		"prefix": "proto",
+		"body": "${1:Class}.prototype.${2:method} = function(${3:arguments}) {\n\t${0}\n};",
+		"description": "prototype method"
+	},
 	//----------------------------------------------------------------------------------
 	//----------------------------------------------------------------------------------
 	// Iterables
@@ -354,16 +381,6 @@
 		"body": "get ${1:property}() {\n\t${0}\n}\nset ${1:property}(${2:value}) {\n\t\n}",
 		"description": "getter and setter (ES6 syntax)"
 	},
-	"prototypal constructor": {
-		"prefix": "pctor",
-		"body": "var ${1:Class} = function(${2:arguments}) {\n\t${0}\n};",
-		"description": "prototypal constructor"
-	},
-	"prototype method": {
-		"prefix": "proto",
-		"body": "${1:Class}.prototype.${2:method} = function(${3:arguments}) {\n\t${0}\n};",
-		"description": "prototype method"
-	},
 	"Object.assign": {
 		"prefix": "oa",
 		"body": "Object.assign(${1:dest}, ${2:source})",
@@ -373,22 +390,6 @@
 		"prefix": "oc",
 		"body": "Object.assign({}, ${1:original}, ${2:source})",
 		"description": "Object.assign copy (shallow clone)"
-	},
-	// Returning values
-	"return": {
-		"prefix": "r",
-		"body": "return ${0};",
-		"description": "return"
-	},
-	"return Promise (ES6)": {
-		"prefix": "rp",
-		"body": "return new Promise((resolve, reject) => {\n\t${0}\n});",
-		"description": "return Promise (ES6)"
-	},
-	"return complex value (such as JSX components)": {
-		"prefix": "rc",
-		"body": "return (\n\t${0}\n);",
-		"description": "return complex value (such as JSX components)"
 	},
 	// Promises
 	"Promise (ES6)": {
@@ -540,10 +541,4 @@
 		"body": "process.nextTick(() => {\n\t${0}\n});",
 		"description": "process nextTick"
 	},
-	// Miscellaneous
-	"insert 'use strict' statement": {
-		"prefix": "us",
-		"body": "'use strict';",
-		"description": "insert 'use strict' statement"
-	}
 }
