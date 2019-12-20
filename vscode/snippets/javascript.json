@@ -23,20 +23,10 @@
 		"body": "console.warn(${0});",
 		"description": "打印警告"
 	},
-	"console.log labeled": {
+	"console.log 占位符": {
 		"prefix": "cll",
-		"body": "console.log('${0}', ${0});",
-		"description": "console.log labeled"
-	},
-	"console.error labeled": {
-		"prefix": "cel",
-		"body": "console.error('${0}', ${0});",
-		"description": "console.error labeled"
-	},
-	"console.warn labeled": {
-		"prefix": "cwl",
-		"body": "console.warn('${0}', ${0});",
-		"description": "console.warn labeled"
+		"body": "console.log('%${1:c}', ${0});",
+		"description": "console.log 占位符"
 	},
 	"document.write": {
 		"prefix": "dw",
@@ -44,33 +34,6 @@
 			"document.write(${0});"
 		],
 		"description": "向文档写入"
-	},
-	"自定义function": {
-		"prefix": "fun",
-		"body": [
-			"function ${1:name}($2){",
-			"\t$0",
-			"}"
-		],
-		"description": "自定义function"
-	},
-	"自定义function表达式": {
-		"prefix": "fu=",
-		"body": [
-			"function ($1){",
-			"\t$0",
-			"}"
-		],
-		"description": "自定义function"
-	},
-	"Immediately Invoked Function Expression": {
-		"prefix": "iife",
-		"body": [
-			"(function ($1){",
-			"  $0",
-			"}($2))"
-		],
-		"description": "立即执行函数"
 	},
 	// 声明定义
 	//var
@@ -213,6 +176,42 @@
 		"description": "switch case"
 	},
 	// Functions
+	"function": {
+		"prefix": "fu",
+		"body": [
+			"function(){",
+			"\t$0",
+			"}"
+		],
+		"description": " function"
+	},
+	"自定义function": {
+		"prefix": "fun",
+		"body": [
+			"function ${1:funName}() {",
+			"\t$0",
+			"}"
+		],
+		"description": "自定义function"
+	},
+	"自定义function表达式": {
+		"prefix": "fu=",
+		"body": [
+			"function ($1){",
+			"\t$0",
+			"}"
+		],
+		"description": "自定义function"
+	},
+	"Immediately Invoked Function Expression": {
+		"prefix": "iife",
+		"body": [
+			"(function ($1){",
+			"  $0",
+			"}($2))"
+		],
+		"description": "立即执行函数"
+	},
 	"function apply": {
 		"prefix": "fa",
 		"body": "${1:fn}.apply(${2:this}, ${3:arguments})",

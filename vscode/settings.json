@@ -17,7 +17,7 @@
   "editor.fontLigatures": true, //使用连体字
   "editor.fontFamily": "Cascadia, Fira Code, Consolas, monospace, 'Courier New'", //设置编辑器字体
   "terminal.integrated.shell.linux": "/bin/bash",
-  "workbench.sideBar.location": "right", //活动栏位置
+  "workbench.sideBar.location": "left", //活动栏位置
   "editor.formatOnSave": true, //保存自动格式化
   "debug.console.fontFamily": "Fira Code", //调试控制台的字体
   "debug.openDebug": "neverOpen",
@@ -62,13 +62,13 @@
   //   "",
   // ], //设置某某后缀名文件不使用该插件
   /*HTML CSS Support插件指定样式表*/
-  "css.fileExtensions": [
-    "css",
-    "scss"
-  ],
+  // "css.fileExtensions": [
+  //   "css",
+  //   "scss"
+  // ],
   "liveServer.settings.donotVerifyTags": true,
   "liveServer.settings.donotShowInfoMsg": true,
-  "workbench.colorTheme": "Material Theme",
+  "workbench.colorTheme": "Material Theme Palenight High Contrast",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.startupEditor": "newUntitledFile",
@@ -76,4 +76,17 @@
   "[javascript]": {
     "editor.defaultFormatter": "HookyQR.beautify"
   },
+  "commentTranslate.targetLanguage": "zh-CN",
+  "explorer.confirmDragAndDrop": false,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "extensions.ignoreRecommendations": false,
+  "php.validate.executablePath": "D:\\wamp64\\bin\\php\\php7.3.12\\php.exe",
+  "editor.fontSize": 16,
+  "sync.gist": "a7168bd793b8b79720eb69d7e844b92341558ff2",
+  "sync.removeExtensions": false
 }

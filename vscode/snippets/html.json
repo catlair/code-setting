@@ -1,0 +1,20 @@
+{
+	"vue test mobel": {
+		"prefix": "vue",
+		"body": [
+			"\t<div id=\"app\">",
+			"\t\t{{name}}",
+			"\t</div>",
+			"\t<script src=\"http://127.0.0.11/vue/vue.js\"></script>",
+			"\t<script>",
+			"\t\tconst app = new Vue({",
+			"\t\t\tel: '#app',",
+			"\t\t\tdata: {",
+			"\t\t\t\tname: '你好',",
+			"\t\t\t}",
+			"\t\t});",
+			"\t</script>"
+		],
+		"description": "生成测试vue的模板"
+	},
+}
