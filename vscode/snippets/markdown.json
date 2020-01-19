@@ -174,7 +174,7 @@
 		"prefix": "js",
 		"body": [
 			"```javascript",
-			"\t$0",
+			"$0",
 			"```"
 		],
 		"description": "javascript"
@@ -259,7 +259,7 @@
 			"```"
 		],
 		"description": "bash"
-	}
+	},
 	//任务列表
 	"任务列表": {
 		"prefix": "ch",

@@ -135,12 +135,7 @@
 	},
 	"for": {
 		"prefix": "fr",
-		"body": "for (let ${1:i} = 0; ${1:i} < ${2:len}; ${1:i}++) {\n\t${0}\n}",
-		"description": "简单for循环"
-	},
-	"for var": {
-		"prefix": "frv",
-		"body": "for (var ${1:i} = 0; ${1:i} < ${2:len}; ${1:i}++) {\n\t${0}\n}",
+		"body": "for (${1|let,var|} ${2:i} = 0; ${2:i} < ${3:len}; ${2:i}++) {\n\t${0}\n}",
 		"description": "简单for循环"
 	},
 	"for in loop": {
@@ -150,7 +145,7 @@
 	},
 	"for of loop (ES6)": {
 		"prefix": "fo",
-		"body": "for (let ${1:key} of ${2:array}) {\n\t${0}\n}",
+		"body": "for (${1|let,const|} ${2:key} of ${3:array}) {\n\t${0}\n}",
 		"description": "for of 循环 (ES6)"
 	},
 	//异常处理
@@ -296,14 +291,7 @@
 		"body": "${1:Class}.prototype.${2:method} = function(${3:arguments}) {\n\t${0}\n};",
 		"description": "prototype method"
 	},
-	//----------------------------------------------------------------------------------
-	//----------------------------------------------------------------------------------
-	// Iterables
-	"sequence of 0..n": {
-		"prefix": "seq",
-		"body": "[...Array(${1:length}).keys()]${0}",
-		"description": "sequence of 0..n"
-	},
+	//迭代
 	"forEach loop": {
 		"prefix": "fe",
 		"body": "${1}.forEach((${2:item}) => {\n\t${0}\n});",
@@ -328,6 +316,83 @@
 		"prefix": "find",
 		"body": "${1}.find(${2:item} => {\n\t${0}\n});",
 		"description": "find"
+	},
+	// ES6 Modules
+	"export (ES6)": {
+		"prefix": "ex",
+		"body": "export ${1:member};",
+		"description": "export (ES6)"
+	},
+	"export default (ES6)": {
+		"prefix": "exd",
+		"body": "export default ${1:member};",
+		"description": "export default (ES6)"
+	},
+	"import module (ES6)": {
+		"prefix": "im",
+		"body": "import ${1:*} from '${2:module}';",
+		"description": "import module (ES6)"
+	},
+	"import module as (ES6)": {
+		"prefix": "ima",
+		"body": "import ${1:*} as ${2:name} from '${3:module}';",
+		"description": "import module as (ES6)"
+	},
+	// Node.js
+	"Node.js style callback": {
+		"prefix": "cb",
+		"body": "(err, ${1:value}) => {${0}}",
+		"description": "Node.js style callback"
+	},
+	"require": {
+		"prefix": "re",
+		"body": "require('${1:module}');",
+		"description": "require"
+	},
+	"require local": {
+		"prefix": "rel",
+		"body": "require('./${1:module}');",
+		"description": "require local"
+	},
+	"require assignment": {
+		"prefix": "req",
+		"body": "const ${1:module} = require('${1:module}');",
+		"description": "require assignment"
+	},
+	"require assignment local": {
+		"prefix": "reql",
+		"body": "const ${1:module} = require('./${1:module}');",
+		"description": "require assignment local"
+	},
+	"destructuring require assignment": {
+		"prefix": "dreq",
+		"body": "const {${1:module}} = require('${1:module}');",
+		"description": "destructuring require assignment"
+	},
+	"destructuring require assignment local": {
+		"prefix": "dreql",
+		"body": "const {${1:module}} = require('./${1:module}');",
+		"description": "destructuring require assignment local"
+	},
+	"exports.member": {
+		"prefix": "em",
+		"body": "exports.${1:member} = ${2:value};",
+		"description": "exports.member"
+	},
+	"module.exports": {
+		"prefix": "me",
+		"body": "module.exports = ${1:name};",
+		"description": "module.exports"
+	},
+	"module exports object": {
+		"prefix": "meo",
+		"body": "module.exports = {\n\t${1:member}\n};",
+		"description": "module exports object"
+	},
+	"event handler": {
+		"prefix": "on",
+		"body": "${1:emitter}.on('${2:event}', (${3:arguments}) => {\n\t${0}\n});",
+		"description": "event handler"
 	},
 	// Objects and Classes
 	"object literal": {
@@ -406,82 +471,11 @@
 		"body": "${1:promise}.catch((${2:err}) => {\n\t${0}\n})",
 		"description": "Promise.catch"
 	},
-	// ES6 Modules
-	"export (ES6)": {
-		"prefix": "ex",
-		"body": "export ${1:member};",
-		"description": "export (ES6)"
-	},
-	"export default (ES6)": {
-		"prefix": "exd",
-		"body": "export default ${1:member};",
-		"description": "export default (ES6)"
-	},
-	"import module (ES6)": {
-		"prefix": "im",
-		"body": "import ${1:*} from '${2:module}';",
-		"description": "import module (ES6)"
-	},
-	"import module as (ES6)": {
-		"prefix": "ima",
-		"body": "import ${1:*} as ${2:name} from '${3:module}';",
-		"description": "import module as (ES6)"
-	},
-	// Node.js
-	"Node.js style callback": {
-		"prefix": "cb",
-		"body": "(err, ${1:value}) => {${0}}",
-		"description": "Node.js style callback"
-	},
-	"require": {
-		"prefix": "re",
-		"body": "require('${1:module}');",
-		"description": "require"
-	},
-	"require local": {
-		"prefix": "rel",
-		"body": "require('./${1:module}');",
-		"description": "require local"
-	},
-	"require assignment": {
-		"prefix": "req",
-		"body": "const ${1:module} = require('${1:module}');",
-		"description": "require assignment"
-	},
-	"require assignment local": {
-		"prefix": "reql",
-		"body": "const ${1:module} = require('./${1:module}');",
-		"description": "require assignment local"
-	},
-	"destructuring require assignment": {
-		"prefix": "dreq",
-		"body": "const {${1:module}} = require('${1:module}');",
-		"description": "destructuring require assignment"
-	},
-	"destructuring require assignment local": {
-		"prefix": "dreql",
-		"body": "const {${1:module}} = require('./${1:module}');",
-		"description": "destructuring require assignment local"
-	},
-	"exports.member": {
-		"prefix": "em",
-		"body": "exports.${1:member} = ${2:value};",
-		"description": "exports.member"
-	},
-	"module.exports": {
-		"prefix": "me",
-		"body": "module.exports = ${1:name};",
-		"description": "module.exports"
-	},
-	"module exports object": {
-		"prefix": "meo",
-		"body": "module.exports = {\n\t${1:member}\n};",
-		"description": "module exports object"
-	},
-	"event handler": {
-		"prefix": "on",
-		"body": "${1:emitter}.on('${2:event}', (${3:arguments}) => {\n\t${0}\n});",
-		"description": "event handler"
+	// Iterables
+	"sequence of 0..n": {
+		"prefix": "seq",
+		"body": "[...Array(${1:length}).keys()]${0}",
+		"description": "sequence of 0..n"
 	},
 	/* BDD Testing //Mocha, Jasmine, etc*/
 	"describe": {

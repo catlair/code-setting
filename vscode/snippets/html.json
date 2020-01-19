@@ -1,20 +1,61 @@
 {
 	"vue test mobel": {
-		"prefix": "vue",
+		"prefix": "vuejs",
 		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"zh-cmn-Hans\">\n",
+			"<head>",
+			"\t<meta charset=\"UTF-8\">",
+			"\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+			"\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">",
+			"\t<title>Document</title>",
+			"</head>\n",
+			"<body>",
 			"\t<div id=\"app\">",
-			"\t\t{{name}}",
+			"\t\t$0",
 			"\t</div>",
-			"\t<script src=\"http://127.0.0.11/vue/vue.js\"></script>",
+			"\t<script src=\"/js/vue.js\"></script>",
 			"\t<script>",
 			"\t\tconst app = new Vue({",
 			"\t\t\tel: '#app',",
-			"\t\t\tdata: {",
-			"\t\t\t\tname: '你好',",
-			"\t\t\t}",
+			"\t\t\tdata: {}",
 			"\t\t});",
-			"\t</script>"
+			"\t</script>",
+			"</body>\n",
+			"</html>"
 		],
 		"description": "生成测试vue的模板"
+	},
+	"Mustache": {
+		"prefix": "mst",
+		"body": [
+			"{{ $1 }}$0"
+		],
+		"description": "Mustache 括号生成"
+	},
+	"vuejs cdn": {
+		"prefix": "vcdn",
+		"body": [
+			"<script src=\"https://cdn.jsdelivr.net/npm/vue/dist/vue.js\"></script>"
+		],
+		"description": "vuejs cdn"
+	},
+	"style tag": {
+		"prefix": "style",
+		"body": [
+			"<style>",
+			"\t$0",
+			"</style>"
+		],
+		"description": "style标签"
+	},
+	"script tag": {
+		"prefix": "script",
+		"body": [
+			"<script>",
+			"\t$0",
+			"</script>"
+		],
+		"description": "script标签"
 	},
 }

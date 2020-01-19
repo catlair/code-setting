@@ -1,5 +1,5 @@
 {
-  "files.autoSave": "off", //自动保存方式
+  "files.autoSave": "afterDelay", //自动保存方式
   "window.zoomLevel": 0,
   "workbench.activityBar.visible": true,
   "breadcrumbs.enabled": true,
@@ -26,8 +26,7 @@
   //"editor.snippetSuggestions": "top", //自定义的代码段位置为置顶
   /*emmet插件变量自定义*/
   "emmet.variables": {
-    "lang": "cmn-Hans",
-    "charset": "UTF-8"
+    "lang": "zh-cmn-Hans"
   },
   /*
     **
@@ -68,9 +67,7 @@
   // ],
   "liveServer.settings.donotVerifyTags": true,
   "liveServer.settings.donotShowInfoMsg": true,
-  "workbench.colorTheme": "Material Theme Palenight High Contrast",
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.startupEditor": "newUntitledFile",
   "diffEditor.ignoreTrimWhitespace": false,
   "[javascript]": {
@@ -87,6 +84,9 @@
   "extensions.ignoreRecommendations": false,
   "php.validate.executablePath": "D:\\wamp64\\bin\\php\\php7.3.12\\php.exe",
   "editor.fontSize": 16,
-  "sync.gist": "a7168bd793b8b79720eb69d7e844b92341558ff2",
-  "sync.removeExtensions": false
+  "java.home": "D:\\Path\\Java\\jdk-11.0.5",
+  "winopacity.opacity": 240,
+  "workbench.statusBar.visible": true,
+  "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
+  "editor.tabSize": 2,
 }
