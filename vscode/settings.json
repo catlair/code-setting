@@ -18,6 +18,7 @@
   "editor.fontFamily": "Cascadia, Fira Code, Consolas, monospace, 'Courier New'", //设置编辑器字体
   "terminal.integrated.shell.linux": "/bin/bash",
   "workbench.sideBar.location": "left", //活动栏位置
+  "emmet.triggerExpansionOnTab": true,
   "editor.formatOnSave": true, //保存自动格式化
   "debug.console.fontFamily": "Fira Code", //调试控制台的字体
   "debug.openDebug": "neverOpen",
@@ -89,4 +90,5 @@
   "workbench.statusBar.visible": true,
   "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
   "editor.tabSize": 2,
+  "html.mirrorCursorOnMatchingTag": false,
 }

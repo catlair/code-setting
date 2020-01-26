@@ -1,0 +1,50 @@
+{
+  "files.autoSave": "afterDelay", //自动保存方式
+  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": true,
+  "breadcrumbs.enabled": true,
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": false,
+  "workbench.iconTheme": "material-icon-theme", //主题
+  "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
+  /*窗口样式的配置*/
+  "workbench.colorCustomizations": {
+    "statusBar.debuggingBackground": "#c06f98", //状态栏debug背景色
+    "statusBar.foreground": "#a2b4bd", //状态栏前景色
+    "editorBracketMatch.background": "#5a6f75" //匹配括号背景颜色
+  },
+  "git.confirmSync": false,
+  "editor.fontLigatures": true, //使用连体字
+  "editor.fontFamily": "Cascadia, Fira Code, Consolas, monospace, 'Courier New'", //设置编辑器字体
+  "workbench.sideBar.location": "left", //活动栏位置
+  "editor.formatOnSave": true, //保存自动格式化
+  "debug.console.fontFamily": "Fira Code", //调试控制台的字体
+  "debug.openDebug": "neverOpen", //何时打开debug视图
+  "[markdown]": {
+    "editor.quickSuggestions": true, //允许md使用候选词
+  },
+  "editor.suggestSelection": "first",
+  "workbench.startupEditor": "newUntitledFile",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "extensions.ignoreRecommendations": true,
+  "editor.fontSize": 16,
+  "terminal.integrated.shell.linux": "/bin/bash",
+  "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\bin\\bash.exe",
+  "java.home": "D:\\Path\\Java\\jdk-11.0.5",
+  "go.goroot": "D:\\Go",
+  "go.gopath": "D:\\Path\\Golang",
+  "go.toolsGopath": "D:\\Path\\Golang",
+  "winopacity.opacity": 240,
+  "workbench.statusBar.visible": true,
+  "editor.tabSize": 4,
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": true
+}

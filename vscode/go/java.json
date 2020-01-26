@@ -1,0 +1,23 @@
+{
+  "java模板": {
+    "prefix": "java",
+    "body": [
+      "public class $TM_FILENAME_BASE {",
+      "",
+      "\tpublic static void main(String[] args) {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ],
+    "description": "java模板"
+  },
+  "入口函数": {
+    "prefix": "psvm",
+    "body": [
+      "public static void main(String[] args) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "入口函数"
+  },
+}
