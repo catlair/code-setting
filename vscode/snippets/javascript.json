@@ -7,7 +7,7 @@
 	"Console.log": {
 		"prefix": "cl",
 		"body": [
-			"console.log($1);$0"
+			"console.log($0);"
 		],
 		"description": "打印日志"
 	},
@@ -207,6 +207,15 @@
 		],
 		"description": "立即执行函数"
 	},
+	"异步立即执行函数": {
+		"prefix": "aiife",
+		"body": [
+			"(async () => {",
+			"\t$0",
+			"})();"
+		],
+		"description": ""
+	},
 	"function apply": {
 		"prefix": "fa",
 		"body": "${1:fn}.apply(${2:this}, ${3:arguments})",
@@ -224,7 +233,7 @@
 	},
 	"arrow function (ES6)": {
 		"prefix": "af",
-		"body": "(${1:arguments}) => ${2:statement}",
+		"body": "($1) => ${2:statement}",
 		"description": "arrow function 箭头函数 (ES6)"
 	},
 	"arrow function with body (ES6)": {

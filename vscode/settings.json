@@ -1,6 +1,10 @@
 {
   "files.autoSave": "afterDelay", //自动保存方式
-  "window.zoomLevel": 0,
+  "remote.SSH.remotePlatform": {
+    "centos7": "linux", //自动选择linux
+    "centos6": "linux"
+  },
+  "remote.SSH.useLocalServer": true, //使用本地服务器
   "workbench.activityBar.visible": true,
   "breadcrumbs.enabled": true,
   "editor.renderWhitespace": "none",
@@ -14,66 +18,51 @@
   },
   "git.confirmSync": false,
   "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\bin\\bash.exe", //默认终端
+  "terminal.integrated.shell.linux": "/bin/zsh",
+  "terminal.integrated.shellArgs.windows": ["-l"],
   "editor.fontLigatures": true, //使用连体字
   "editor.fontFamily": "Cascadia, Fira Code, Consolas, monospace, 'Courier New'", //设置编辑器字体
-  "terminal.integrated.shell.linux": "/bin/bash",
   "workbench.sideBar.location": "left", //活动栏位置
-  "emmet.triggerExpansionOnTab": true,
   "editor.formatOnSave": true, //保存自动格式化
   "debug.console.fontFamily": "Fira Code", //调试控制台的字体
   "debug.openDebug": "neverOpen",
-  //"C_Cpp.updateChannel": "Insiders", //何时打开调试视图
-  // "emmet.triggerExpansionOnTab": true,  //emmet用tab展开
+  "emmet.triggerExpansionOnTab": true, //emmet用tab展开
   //"editor.snippetSuggestions": "top", //自定义的代码段位置为置顶
   /*emmet插件变量自定义*/
   "emmet.variables": {
     "lang": "zh-cmn-Hans"
   },
-  /*
-    **
-    * 不同环境的单独配置
-    **
-    */
   "[markdown]": {
-    "editor.quickSuggestions": true, //允许md使用候选词
+    "editor.quickSuggestions": true //允许md使用候选词
   },
   "[html]": {
-    "editor.defaultFormatter": "HookyQR.beautify", //html使用beautify插件格式化
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  /*
-    *
-    *  用户安装的插件配置
-    *
-    */
-  /*markdown配置文件*/
+  "prettier.singleQuote": true,
+  "prettier.disableLanguages": ["vue", "json"],
+  /*markdown lint配置文件*/
   // "markdownlint.config": {
   //   //html
   //   "MD033": false,
-  //   //结尾空行
-  //   "MD047": false,
   //   //尾随空格
   //   "MD009": false,
   //   //有序列表
   //   "MD029": false,
   // },
   /*bracket-pair-colorizer-2插件的配置*/
-  // "bracket-pair-colorizer-2.showBracketsInGutter": true, //在装订线中显示活动范围括号
+  "bracket-pair-colorizer-2.showBracketsInGutter": true, //在装订线中显示活动范围括号
   // "bracket-pair-colorizer-2.excludedLanguages": [
   //   "",
   // ], //设置某某后缀名文件不使用该插件
   /*HTML CSS Support插件指定样式表*/
-  // "css.fileExtensions": [
-  //   "css",
-  //   "scss"
-  // ],
+  "css.fileExtensions": ["css", "scss", "less"],
   "liveServer.settings.donotVerifyTags": true,
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.suggestSelection": "first",
   "workbench.startupEditor": "newUntitledFile",
   "diffEditor.ignoreTrimWhitespace": false,
-  "[javascript]": {
-    "editor.defaultFormatter": "HookyQR.beautify"
-  },
+  "javascript.preferences.quoteStyle": "single",
+  // "javascript.suggest.completeFunctionCalls": true,
   "commentTranslate.targetLanguage": "zh-CN",
   "explorer.confirmDragAndDrop": false,
   "files.exclude": {
@@ -82,13 +71,42 @@
     "**/.settings": true,
     "**/.factorypath": true
   },
-  "extensions.ignoreRecommendations": false,
-  "php.validate.executablePath": "D:\\wamp64\\bin\\php\\php7.3.12\\php.exe",
+  "less.compile": {
+    "compress": false, // true => remove surplus whitespace
+    "sourceMap": false, // true => generate source maps (.css.map files)
+    "out": "./css/" // false => DON'T output .css files (overridable per-file, see below) //${workspaceRoot}
+  },
   "editor.fontSize": 16,
-  "java.home": "D:\\Path\\Java\\jdk-11.0.5",
-  "winopacity.opacity": 240,
-  "workbench.statusBar.visible": true,
-  "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
   "editor.tabSize": 2,
-  "html.mirrorCursorOnMatchingTag": false,
+  //NPM 插件
+  "npm-intellisense.importES6": true,
+  "npm-intellisense.importQuotes": "'",
+  "npm-intellisense.importLinebreak": ";\r\n",
+  "npm-intellisense.importDeclarationType": "const",
+  "liveServer.settings.CustomBrowser": "chrome",
+  "files.associations": {
+    ".vuerc": "json",
+    ".sequelizerc": "typescript"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.eol": "\n",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vsintellicode.features.python.deepLearning": "enabled",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "git.ignoreLegacyWarning": true,
+  "remote.extensionKind": {
+    "ms-azuretools.vscode-docker": "workspace"
+  },
+  "vetur.validation.template": false
 }

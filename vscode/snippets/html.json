@@ -1,6 +1,6 @@
 {
-	"vue test mobel": {
-		"prefix": "vuejs",
+	"vue2 test mobel": {
+		"prefix": "v2",
 		"body": [
 			"<!DOCTYPE html>",
 			"<html lang=\"zh-cmn-Hans\">\n",
@@ -14,7 +14,7 @@
 			"\t<div id=\"app\">",
 			"\t\t$0",
 			"\t</div>",
-			"\t<script src=\"/js/vue.js\"></script>",
+			"\t<script src=\"../vuejs/vue.v2.6.10.js\"></script>",
 			"\t<script>",
 			"\t\tconst app = new Vue({",
 			"\t\t\tel: '#app',",
@@ -23,6 +23,39 @@
 			"\t</script>",
 			"</body>\n",
 			"</html>"
+		],
+		"description": "生成测试vue的模板"
+	},
+	"vue3 test mobel": {
+		"prefix": "v3",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"zh-cmn-Hans\">",
+			"\t<head>",
+			"\t\t<meta charset=\"UTF-8\" />",
+			"\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />",
+			"\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\" />",
+			"\t\t<title>Document</title>",
+			"\t</head>",
+			"",
+			"\t<body>",
+			"\t\t<div id=\"app\">",
+			"\t\t\t$0",
+			"\t\t</div>",
+			"\t\t<script type=\"module\">",
+			"\t\t\timport { createApp } from '../vuejs/vue.esm-browser.js';",
+			"",
+			"\t\t\tconst App = {",
+			"\t\t\t\tsetup() {",
+			"\t\t\t\t\treturn {};",
+			"\t\t\t\t},",
+			"\t\t\t};",
+			"",
+			"\t\t\tconst app = createApp(App);",
+			"\t\t\tapp.mount('#app');",
+			"\t\t</script>",
+			"\t</body>",
+			"</html>",
 		],
 		"description": "生成测试vue的模板"
 	},
@@ -57,5 +90,42 @@
 			"</script>"
 		],
 		"description": "script标签"
+	},
+	"canvas table": {
+		"prefix": "canvas",
+		"body": [
+			"<!DOCTYPE html>",
+			"<html lang=\"zh-cmn-Hans\">\n",
+			"<head>",
+			"\t<meta charset=\"UTF-8\">",
+			"\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+			"\t<title>Document</title>",
+			"\t<style>",
+			"\t\tcanvas {",
+			"\t\t\tborder: 1px solid #000;",
+			"\t\t}",
+			"\t</style>",
+			" <script src=\"../js/table.js\"></script>",
+			"</head>\n",
+			"<body>",
+			"\t<canvas width=\"300\" height=\"300\"></canvas>",
+			"\t<script>",
+			"\t\tconst canvas = document.getElementsByTagName('canvas')[0];",
+			"\t\tconst ctx = canvas.getContext('2d');",
+			"\t\ttable(ctx);",
+			"\t\t$0",
+			"\t</script>",
+			"</body>\n",
+			"</html>"
+		]
+	},
+	"svg xmlns": {
+		"prefix": "svg",
+		"body": [
+			"<svg xmlns=\"http: //www.w3.org/2000/svg\">",
+			"\t$0",
+			"</svg>"
+		],
+		"description": "svg xmlns"
 	},
 }
