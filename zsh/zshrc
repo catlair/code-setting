@@ -1,0 +1,8 @@
+source ~/.config/zsh/powerlevel9k.zsh
+source ~/.config/zsh/env.zsh
+source ~/.config/zsh/aliases.zsh
+source ~/.config/zsh/plugins.zsh
+
+if [ -f ~/.sconfig/zsh/zshrc ]; then
+	source ~/.sconfig/zsh/zshrc
+fi
