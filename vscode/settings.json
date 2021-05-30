@@ -1,3 +1,4 @@
+//https://code.visualstudio.com/docs/getstarted/settings
 {
   "remote.SSH.remotePlatform": {
     "centos7": "linux", //自动选择linux
@@ -50,9 +51,23 @@
   "explorer.confirmDragAndDrop": false,
   "git.ignoreLegacyWarning": true,
   "git.confirmSync": false,
-  "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\bin\\bash.exe",
+  // 使用新的方法会慢半拍？？？
+  // "terminal.integrated.profiles.windows": {
+  //   "Git Bash": {
+  //     "path": "D:\\Program Files\\Git\\bin\\bash.exe",
+  //     "args": ["-l"] // 保留历史记录
+  //   },
+  //   "PowerShell -NoProfile": null,
+  //   "cmd": {
+  //     "path": "C:\\WINDOWS\\System32\\cmd.exe"
+  //   }
+  // },
+  /** 本来应该下面这行就行，不知道为啥出问题，所以加了上面的profiles */
+  // "terminal.integrated.defaultProfile.windows": "Git Bash", // 默认使用
+  /** 还是这个好用（虽然显示废弃） */
+  "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\bin\\bash.exe", //默认终端
   "terminal.integrated.shellArgs.windows": ["-l"],
-  // "terminal.integrated.tabs.enabled": true // 终端tab显示
+  "terminal.integrated.tabs.enabled": false, // 使用新的tab布局（不习惯所以关闭）
   "debug.console.fontFamily": "Fira Code", //调试控制台的字体
   // "debug.openDebug": "neverOpen",
   "emmet.triggerExpansionOnTab": true, //emmet用tab展开
