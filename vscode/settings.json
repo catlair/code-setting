@@ -1,5 +1,4 @@
 {
-  "files.autoSave": "afterDelay", //自动保存方式
   "remote.SSH.remotePlatform": {
     "centos7": "linux", //自动选择linux
     "centos6": "linux"
@@ -8,7 +7,30 @@
   "workbench.activityBar.visible": true,
   "breadcrumbs.enabled": true,
   "editor.renderWhitespace": "none",
-  "editor.renderControlCharacters": false,
+  "editor.fontLigatures": true, //使用连体字
+  "editor.fontFamily": "'JetBrains Mono', Fira Code, '思源宋体', Consolas, 'DejaVuSansMono NF'", //设置编辑器字体
+  "editor.formatOnSave": true, //保存自动格式化
+  "editor.suggestSelection": "first",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  //"editor.snippetSuggestions": "top", //自定义的代码段位置为置顶
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // 默认格式化软件
+  "editor.fontSize": 16,
+  "editor.tabSize": 2,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "files.associations": {
+    ".vuerc": "json",
+    ".sequelizerc": "typescript",
+    ".env": "plaintext",
+    ".prettierrc": "plaintext"
+  },
+  "files.autoSave": "afterDelay", //自动保存方式
   "workbench.iconTheme": "material-icon-theme", //主题
   /*窗口样式的配置*/
   "workbench.colorCustomizations": {
@@ -16,97 +38,83 @@
     "statusBar.foreground": "#a2b4bd", //状态栏前景色
     "editorBracketMatch.background": "#5a6f75" //匹配括号背景颜色
   },
-  "git.confirmSync": false,
-  "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\bin\\bash.exe", //默认终端
-  "terminal.integrated.shell.linux": "/bin/zsh",
-  "terminal.integrated.shellArgs.windows": ["-l"],
-  "editor.fontLigatures": true, //使用连体字
-  "editor.fontFamily": "Cascadia, Fira Code, Consolas, monospace, 'Courier New'", //设置编辑器字体
   "workbench.sideBar.location": "left", //活动栏位置
-  "editor.formatOnSave": true, //保存自动格式化
+  "workbench.statusBar.visible": true,
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "workbench.startupEditor": "none",
+  "explorer.confirmDragAndDrop": false,
+  "git.ignoreLegacyWarning": true,
+  "git.confirmSync": false,
+  "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\bin\\bash.exe",
+  "terminal.integrated.shellArgs.windows": ["-l"],
+  // "terminal.integrated.tabs.enabled": true // 终端tab显示
   "debug.console.fontFamily": "Fira Code", //调试控制台的字体
-  "debug.openDebug": "neverOpen",
+  // "debug.openDebug": "neverOpen",
   "emmet.triggerExpansionOnTab": true, //emmet用tab展开
-  //"editor.snippetSuggestions": "top", //自定义的代码段位置为置顶
-  /*emmet插件变量自定义*/
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.excludeLanguages": [], // 要在markdown中使用html必须排除[]
+  "emmet.includeLanguages": {
+    "markdown": "html"
+  },
   "emmet.variables": {
-    "lang": "zh-cmn-Hans"
+    "lang": "zh-CN"
   },
   "[markdown]": {
+    "editor.autoIndent": "full",
     "editor.quickSuggestions": true //允许md使用候选词
   },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "remote.extensionKind": {
+    "ms-azuretools.vscode-docker": "workspace"
   },
-  "prettier.singleQuote": true,
-  "prettier.disableLanguages": ["vue", "json"],
-  /*markdown lint配置文件*/
-  // "markdownlint.config": {
-  //   //html
-  //   "MD033": false,
-  //   //尾随空格
-  //   "MD009": false,
-  //   //有序列表
-  //   "MD029": false,
-  // },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  },
+  "prettier.singleQuote": true, // 默认使用单引号
   /*bracket-pair-colorizer-2插件的配置*/
   "bracket-pair-colorizer-2.showBracketsInGutter": true, //在装订线中显示活动范围括号
-  // "bracket-pair-colorizer-2.excludedLanguages": [
-  //   "",
-  // ], //设置某某后缀名文件不使用该插件
   /*HTML CSS Support插件指定样式表*/
   "css.fileExtensions": ["css", "scss", "less"],
   "liveServer.settings.donotVerifyTags": true,
   "liveServer.settings.donotShowInfoMsg": true,
-  "editor.suggestSelection": "first",
-  "workbench.startupEditor": "newUntitledFile",
   "diffEditor.ignoreTrimWhitespace": false,
   "javascript.preferences.quoteStyle": "single",
-  // "javascript.suggest.completeFunctionCalls": true,
   "commentTranslate.targetLanguage": "zh-CN",
-  "explorer.confirmDragAndDrop": false,
-  "files.exclude": {
-    "**/.classpath": true,
-    "**/.project": true,
-    "**/.settings": true,
-    "**/.factorypath": true
-  },
   "less.compile": {
     "compress": false, // true => remove surplus whitespace
     "sourceMap": false, // true => generate source maps (.css.map files)
     "out": "./css/" // false => DON'T output .css files (overridable per-file, see below) //${workspaceRoot}
   },
-  "editor.fontSize": 16,
-  "editor.tabSize": 2,
   //NPM 插件
   "npm-intellisense.importES6": true,
   "npm-intellisense.importQuotes": "'",
   "npm-intellisense.importLinebreak": ";\r\n",
   "npm-intellisense.importDeclarationType": "const",
-  "liveServer.settings.CustomBrowser": "chrome",
-  "files.associations": {
-    ".vuerc": "json",
-    ".sequelizerc": "typescript"
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "files.eol": "\n",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "vsintellicode.features.python.deepLearning": "enabled",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "git.ignoreLegacyWarning": true,
-  "remote.extensionKind": {
-    "ms-azuretools.vscode-docker": "workspace"
-  },
-  "vetur.validation.template": false
+  "C_Cpp.updateChannel": "Insiders",
+  // "[python]": {
+  //   "editor.defaultFormatter": "ms-python.python"
+  // },
+  "http.proxyAuthorization": null,
+  "winopacity.opacity": 235,
+  "cssrem.rootFontSize": 80,
+  "svg.preview.mode": "svg"
 }
